@@ -1,0 +1,105 @@
+.empty {
+    height: 70vh;
+    display: grid;
+    justify-content: center;
+    align-content: center;
+    text-align: center;
+}
+
+.btn-primary{
+    font-size: 19px;
+}
+
+
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+.cart {
+    border-radius: 20px;
+    background-color: white;
+    width:80%;
+
+    margin-left: 100px;
+    margin-top: 15px;
+    max-height: 300px;
+
+    &:not(:last-child) {
+        border-bottom: inset 2px oldlace;
+    }
+
+    &>* {
+        margin: 1rem;
+    }
+
+
+}
+
+
+
+
+
+.imageBox {
+
+    .img {
+        border-radius: 15px;
+
+        width: 100%;
+    }
+}
+
+
+
+.countSign {
+    font-size: 18px;
+
+}
+
+.col-1 {
+    text-align: end;
+    padding-top: 10px;
+    margin-bottom: -100px;
+}
+
+.bi-trash {
+    font-size: 20px;
+    color: red
+}
+
+.price {
+    color: rgba(8, 8, 8, 0.486)
+}
+
+.order {
+    border-radius: 15px;
+    display: grid;
+    justify-content: center;
+    gap: 1rem;
+    margin-top: 1rem;
+    padding-top: .5rem;
+    background-color: white;
+    width: 300px
+}
+
+
+
+.btn {
+    border-radius: 15px;
+    width: 300px;
+}
+
+.wrapper {
+    display: grid;
+    grid-template-columns: 50% 50%;
+
+}
+.box2{
+    justify-self: center;
+    align-self: stretch;
+}
+.totalCheck{
+    justify-self: center;
+}

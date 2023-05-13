@@ -1,0 +1,71 @@
+<div class="empty" *ngIf="items.length < 1">
+    <div class="info">
+        <h4>Корзина пустая</h4>
+        <a routerLink="" class="btn btn-primary"> На главную</a>
+    </div>
+</div>
+<ng-container *ngIf="items.length > 0">
+    <div class="wrapper">
+        <div class="box1">
+            <div class="cart shadow " *ngFor="let item of items; let i = index">
+                <div class="row justify-content-end ">
+                    <div class="col-1 ">
+                        <div class="trash ">
+                            <i class="bi bi-trash" aria-hidden="true" (click)="onDelete(i)"></i>
+                        </div>
+                    </div>
+                </div>
+                <div class="row align-items-center ">
+                    <div class="col-3">
+                        <div class="imageBox">
+                            <img class="img" src={{item.img}}>
+                        </div>
+                    </div>
+                    <div class="col-9">
+                        <div class="title">
+                            {{item.title}}
+
+                        </div>
+                        <div class="price">
+                            {{item.price | currency:"RUB"}}
+                        </div>
+                    </div>
+                </div>
+                <div class="row ">
+                    <div class="col-4">
+                        <div class="count">
+                            <p class="countSign">
+                                <i class="fa-solid fa-circle-minus d-inline p-4" (click)="minus(i)"
+                                    style="color: #e1cf5b;"></i>
+                                {{item.count}}
+                                <i class="fa-solid fa-circle-plus d-inline p-4" (click)="plus(i)"
+                                    style="color: #e1cf5b;"></i>
+                            </p>
+                        </div>
+
+                    </div>
+                    <div class="col-6">
+
+                    </div>
+                    <div class="col-2">
+                        <div class="subtotal">
+                            {{item.price * item.count | currency:"RUB"}}
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <div class="box2">
+            <div class="order shadow">
+                <div class="row totalCheck">
+                    <b class="col-6">Итого</b>
+                    <b class="col-6">{{total | currency:"RUB"}}</b>
+                </div>
+
+                <button class="btn btn-dark d-block shadow">Оформить заказ</button>
+            </div>
+        </div>
+    </div>
+
+</ng-container>

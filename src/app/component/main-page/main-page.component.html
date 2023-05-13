@@ -1,0 +1,51 @@
+<div class="container">
+    <p class="textCard">
+        Наушники
+    </p>
+    <div class="row">
+        <div class="card shadow" *ngFor="let product of headphones">
+            <i class="bi bi-heart-fill" (click)="addToFav(product)"> </i>
+            <img class="card-img-top mx-auto" src={{product.img}}>
+            <div class="card-body">
+                <div class="row">
+                    <p class="card-text col-7">{{product.title}}</p>
+                    <p class="card-text col-5 text-end">{{product.price| currency:"RUB"}}</p>
+                </div>
+                <div class="row">
+                    <p class="card-text col-8 mt-3">
+                        <i class="bi bi-star-fill"></i>
+                        {{product.rate}}
+                    </p>
+                    <button type="button" class="btn btn-white col-4" (click)="addToCard(product)">Купить</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="container">
+    <p class="textCard">
+        Смартфоны
+    </p>
+    <div class="row">
+        <div class="card shadow" *ngFor="let product of phones">
+            <img class="card-img-top mx-auto" src={{product.img}}>
+            <div class="card-body">
+                <div class="row">
+                    <p class="card-text col-7">{{product.title}}</p>
+                    <p class="card-text col-5  text-end">{{product.price | currency:"RUB"}}</p>
+                </div>
+                <div class="row">
+                    <p class="card-text mt-3 col-8">
+                        <i class="bi bi-star-fill"></i>
+                        {{product.rate}}
+                    </p>
+                    <button type="button" class="btn btn-white col-4" (click)="addToCard(product)">Купить</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+

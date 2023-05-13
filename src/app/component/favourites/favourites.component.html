@@ -1,0 +1,31 @@
+<div class="empty" *ngIf="items.length < 1">
+    <div class="info">
+        <h4>Вы ничего не добавили в избранное</h4>
+        <a routerLink="" class="btn btn-primary"> ПОГНАЛИ</a>
+    </div>
+</div>
+
+
+
+<div class="container">
+
+    <div class="row">
+        <div class="card shadow " *ngFor="let item of items; let i=index">
+            <i class="bi bi-heart-fill" (click)="deleteFromFav(i)"> </i>
+            <img class="card-img-top mx-auto" src={{item.img}}>
+            <div class="card-body">
+                <div class="row">
+                    <p class="card-text col-7">{{item.title}}</p>
+                    <p class="card-text col-5 text-end">{{item.price| currency:"RUB"}}</p>
+                </div>
+                <div class="row">
+                    <p class="card-text col-8 mt-3">
+                        <i class="bi bi-star-fill"></i>
+                        {{item.rate}}
+                    </p>
+                    <button type="button" class="btn btn-white col-4" (click)="addToCard(item)">Купить</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
