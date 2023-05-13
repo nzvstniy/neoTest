@@ -61,3 +61,7 @@ i {
 .row {
     justify-content: center;
 }
+.btn-primary{
+    width: 300px;
+
+}
