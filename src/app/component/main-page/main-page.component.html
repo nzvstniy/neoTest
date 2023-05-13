@@ -28,6 +28,7 @@
     </p>
     <div class="row">
         <div class="card shadow" *ngFor="let product of phones">
+            <i class="bi bi-heart-fill" (click)="addToFav(product)"> </i>
             <img class="card-img-top mx-auto" src={{product.img}}>
             <div class="card-body">
                 <div class="row">
