@@ -35,8 +35,8 @@ img {
     margin-top: 3%;
     margin-left: 6%;
     margin-right: 6%;
-    max-width: 327.5;
-
+    max-width: 327.5px;
+    min-width: 320px;
     justify-content: center;
 
 }

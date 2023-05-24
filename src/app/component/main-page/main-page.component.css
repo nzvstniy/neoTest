@@ -18,7 +18,6 @@ img {
     margin-left: 6%;
     min-width: 320px;
     justify-content: center;
-
 }
 
 .card-img-top {
@@ -43,7 +42,15 @@ i {
     color: rgb(255, 208, 0);
 
 }
+.col-5{
+    margin: 0;
+    align-self: center;
+}
 
+.col-7{
+    margin: 0;
+    align-self: center;
+}
 button {
     width: 80px;
     height: 40px;

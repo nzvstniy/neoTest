@@ -6,7 +6,7 @@
     text-align: center;
 }
 
-.btn-primary{
+.btn-primary {
     font-size: 19px;
 }
 
@@ -18,6 +18,8 @@ input::-webkit-inner-spin-button {
     margin: 0;
 }
 
+
+/*
 .cart {
     border-radius: 20px;
     background-color: white;
@@ -37,26 +39,95 @@ input::-webkit-inner-spin-button {
 
 
 }
+*/
+.row {
+    margin: 0;
+}
 
+.cart {
+    position: relative;
+    border-radius: 20px;
+    min-width: 320px;
+    background-color: white;
+    width: 100%;
+    &:not(:last-child) {
+        border-bottom: inset 30px white;
+    }
 
+    &>* {
+        margin: 1rem;
+    }
+}
 
+img {
+    border-radius: 15px;
+    max-width: 175px
+}
 
+@media (-webkit-min-device-pixel-ratio: 2),
+(min-resolution: 192dpi) {
+    img {
+        max-width: 150px;
+    }
 
-.imageBox {
+}
 
-    .img {
-        border-radius: 15px;
+@media(min-width: 340px) {
+    .box{
+        min-width: 320px;
+        padding: 0;
+    }
+    
+}
 
-        width: 100%;
+@media(min-width: 930px) and (max-width: 1360px) {
+    .title{
+        margin-left: -20px !important;
+    }
+    .price{
+        margin-left: -20px !important;
+    }
+    
+}
+
+@media(min-width: 320px) and (max-width: 930px) {
+    .title{
+        margin-left: 5px !important;
+    }
+    .price{
+        margin-left: 5px !important;
+    }
+    
+}
+
+.title{
+    margin-left: -100px;
+}
+.price{
+    margin-left: -100px;
+}
+.mainBox {
+    justify-content: center;
+    justify-self: center;
+}
+
+@media screen and (min-width: 340px) and (max-width: 1880px){
+    .imageBox{
+        padding: 0;
+    }
+    .changer{
+        padding: 16px !important;
     }
 }
 
 
-
-.countSign {
-    font-size: 18px;
-
+.changer{
+    padding: 28px ;
 }
+.countSign {
+    font-size: 20px;
+}
+
 
 .col-1 {
     text-align: end;
@@ -64,16 +135,23 @@ input::-webkit-inner-spin-button {
     margin-bottom: -100px;
 }
 
+
+
 .bi-trash {
     font-size: 20px;
     color: red
 }
 
+
+
 .price {
     color: rgba(8, 8, 8, 0.486)
 }
 
+
+
 .order {
+    height: 100px;
     border-radius: 15px;
     display: grid;
     justify-content: center;
@@ -81,25 +159,24 @@ input::-webkit-inner-spin-button {
     margin-top: 1rem;
     padding-top: .5rem;
     background-color: white;
-    width: 300px
+    width: 320px;
+}
+
+.cards {
+    min-width: 320px;
 }
 
 
 
 .btn {
     border-radius: 15px;
-    width: 300px;
+    width: 320px;
 }
 
-.wrapper {
-    display: grid;
-    grid-template-columns: 50% 50%;
 
-}
-.box2{
-    justify-self: center;
-    align-self: stretch;
-}
-.totalCheck{
+
+
+
+.totalCheck {
     justify-self: center;
 }

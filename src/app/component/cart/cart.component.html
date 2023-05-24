@@ -5,7 +5,74 @@
     </div>
 </div>
 <ng-container *ngIf="items.length > 0">
-    <div class="wrapper">
+
+
+
+    <div class="row mainBox">
+        <div class="col-5 box">
+            <div class="cards" *ngFor="let item of items; let i = index">
+                <div class="cart shadow col-8 ">
+                    <div class="row justify-content-end ">
+                        <div class="col-1 ">
+                            <div class="trash text-end">
+                                <i class="bi bi-trash" aria-hidden="true" (click)="onDelete(i)"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row align-items-center ">
+                        <div class="col-5 imageBox">
+                                <img class="img" src={{item.img}}>
+                        </div>
+                        <div class="col-6">
+                            <div class="title">
+                                {{item.title}}
+
+                            </div>
+                            <div class="price">
+                                {{item.price | currency:"RUB"}}
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+
+                        <div class="col-7">
+                            <div class="count">
+                                <p class="countSign">
+                                    <i class="fa-solid fa-circle-minus d-inline changer " (click)="minus(i)"
+                                        style="color: #e1cf5b;">
+                                    </i>
+                                    {{item.count}}
+                                    <i class="fa-solid fa-circle-plus d-inline changer " (click)="plus(i)"
+                                        style="color: #e1cf5b;">
+                                    </i>
+                                </p>
+                            </div>
+
+                        </div>
+
+                        <div class="col-5 text-end">
+                            <div class="subtotal">
+                                {{item.price * item.count | currency:"RUB"}}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-xl-1"></div>
+        <div class="order shadow col-4 ">
+            <div class="row totalCheck">
+                <b class="col-6">Итого</b>
+                <b class="col-6">{{total | currency:"RUB"}}</b>
+            </div>
+
+            <button class="btn btn-dark d-block shadow">Оформить заказ</button>
+        </div>
+    </div>
+
+</ng-container>
+<!--
+        <div class="wrapper">
         <div class="box1">
             <div class="cart shadow " *ngFor="let item of items; let i = index">
                 <div class="row justify-content-end ">
@@ -67,5 +134,4 @@
             </div>
         </div>
     </div>
-
-</ng-container>
+-->
